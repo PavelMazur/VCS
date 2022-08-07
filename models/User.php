@@ -25,7 +25,6 @@ class User{
     {
         $db = new ConDataBase();
         $sql = "SELECT * FROM `registration` where `id` =". $id;
-
         $result = $db->conn->query($sql);
 
         while($row = $result->fetch_assoc()) {
@@ -34,6 +33,33 @@ class User{
         $db->conn->close();
         return $user;
     }
+
+    public static function ifExistsPlantName(string $name) {
+        $db = new ConDataBase();
+        $sql = "SELECT * FROM registration WHERE name = '".$name."'";
+        $result = $db->conn->query($sql);
+
+        while($row = $result->fetch_assoc()) {
+            $user = new User($row["id"], $row["name"], $row["surname"], $row["bool"], $row["age"], $row["height"]);
+        }
+        $db->conn->close();
+        return $user;
+    }
+
+    public static function ifExistsPlantSurname(string $surname) {
+        $db = new ConDataBase();
+        $sql = "SELECT * FROM registration WHERE surname = '".$surname."'";
+        $result = $db->conn->query($sql);
+
+        while($row = $result->fetch_assoc()) {
+            $user = new User($row["id"], $row["name"], $row["surname"], $row["bool"], $row["age"], $row["height"]);
+        }
+        $db->conn->close();
+        return $user;
+    }
+
+
+
 
     public static function all()
     {

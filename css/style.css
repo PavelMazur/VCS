@@ -1,0 +1,191 @@
+#header > *,
+#footer > * {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* HEADER */
+#header {
+    /* margin-top: 32px; */
+    width: 100%;
+    height: 100px;
+    background-color: rgb(15, 82, 36);
+    box-shadow: 0px 5px 10px 10px #10390e; 
+    display: grid;
+    padding-top: 25px;
+    color: #fff;
+    grid-template-columns: 300px 1fr 300px;
+    opacity: 0.7;
+}
+
+/* FOOTER */
+#footer {
+    height: 80px;
+    width: 100%;
+    position:fixed;
+    bottom:0px;
+    background-color: rgb(15, 82, 36);
+    box-shadow: 0px 5px 10px 20px #10390e; 
+    display: grid;
+    padding-top: 20px;
+    color: #fff;
+    grid-template-columns: 300px 1fr 300px;
+    opacity: 0.7;
+}
+
+/* MAIN */
+#inputTable {
+    margin: 80px 0 0 calc((100% - 600px) / 2);
+	width: 600px;
+    height: 1000px;
+	max-width: 800px;
+    min-width: 520px;
+}
+
+    #inputForm {
+        background-color: #fff;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0px 5px 30px 20px #10390e; 
+        background-image: url(../images/depositphotos_3423532-stock-illustration-gray-metal-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+h1 {
+    font-size: 2.5rem;
+    padding: 15px 20px;
+    background-color: rgba(42, 155, 102, 0.3);
+    margin-bottom: 20px;
+    text-align: center;
+	border-bottom: 5px solid #10390e;
+}
+
+h2 {
+    color:#10390e;
+}
+
+.radioInput {
+    font-size: 20px; color:#10390e;
+}
+.radioLabel {
+    font-size: 20px; 
+    color:#10390e;
+}
+.textInput {
+    margin-left: 150px !important;
+    width:  300px;
+    height: 50px !important;
+}
+
+.input-requirements {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: left;
+    list-style: disc;
+    list-style-position: inside;
+    max-width: 400px;
+    margin: 10px auto;
+    color: rgb(0, 0, 0);
+  }
+
+    /*input styles front-validation*/
+    input:invalid {                                                           
+        border: 1px solid red !important;
+        background-color: rgba(255, 0, 0, 0.2) !important;
+    }
+  
+    input:valid {
+        border: 1px solid rgb(94, 255, 0) !important;
+        background-color: rgba(0, 128, 0, 0.2) !important;
+    }
+
+    /*input style overWrite 100*/
+    input:placeholder-shown {                                                  
+        border-color: rgb(0, 0, 0) !important;
+        background-color: grey !important;
+        opacity: 0.4;
+    }
+    /*input styles for li */
+    .input-requirements li.invalid {                                            
+        color: #e74c3c;     
+    }
+      
+    .input-requirements li.valid {
+        color: #106b0b;
+    }
+
+    .input-requirements li.valid:after {
+        display: inline-block;
+        padding-left: 10px;
+        content: "\2713";
+    }
+
+    /*autofill style prevent*/
+    input:-webkit-autofill {transition: background-color 5000s ease-in-out 0s;}     
+   
+    /*back validation style*/
+    .errMessage {
+        margin: 0 150px 0 150px;
+    }
+
+#formBottom {
+	border-top: 5px solid #10390e;
+    font-size: 2.5rem;
+    height: 65px;
+    padding: 15px 20px;
+    background-color: rgba(42, 155, 102, 0.3);
+    margin-top: 20px;
+}
+    .save {
+        margin: 20px 0 0 200px !important;
+        background-color: #699666 !important;
+        border: 2px solid #10390e !important;
+        border-radius: 5px !important;
+        color: #10390e !important;
+        font-size: large !important;
+    }
+    .list {
+        margin-left: 200px !important;
+        margin-top: 15px ;
+        background-color: #699666 !important;
+        border: 2px solid #10390e !important;
+        border-radius: 5px !important;
+        color: #10390e !important;
+        font-size: large !important;
+    }
+
+#outputTable {
+    width: 600px;
+    height: auto;
+    margin: 180px 0 0 calc((100% - 600px) / 2);
+}
+
+    th,
+    thead,
+    td {
+        text-align: center !important;
+        padding: 0 50px 0 50px;
+    }
+
+    a, a:hover, a:focus, a:active {
+        text-decoration: none !important;
+        color: inherit ;
+        color: white !important;
+   }
+
+
+
+/* ======== overWrite BootStrap's table's background ========= */
+.modal,
+.modal-content {
+    background-color: #ffffff00 !important;
+    border: none !important;
+}
+
+.modal-header {
+    border: none !important;
+}
+
+
+

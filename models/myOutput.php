@@ -3,7 +3,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <div id="outputTable">
+                        <div id="outputTable" >
                             <table class="table table-dark table-hover">
                                 <button type="button" style="background-color: #ffffff00!important" class=" modal-header btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <tr>
@@ -43,4 +43,3 @@
                 </div>
             </div>
         </div>
-        <!-- <?php print_r($prob); ?> -->
