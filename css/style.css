@@ -68,10 +68,12 @@ h2 {
 .radioInput {
     font-size: 20px; color:#10390e;
 }
+
 .radioLabel {
     font-size: 20px; 
     color:#10390e;
 }
+
 .textInput {
     margin-left: 150px !important;
     width:  300px;

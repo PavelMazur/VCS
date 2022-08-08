@@ -9,7 +9,6 @@ class User{
     public $age;
     public $height;
 
-
     public function __construct($id, $name, $surname, $bool, $age, $height) {
         $this->id = $id;
         $this->name = $name;
@@ -17,8 +16,6 @@ class User{
         $this->bool = $bool;
         $this->age = $age;
         $this->height = $height;
-
-
     }
 
     public static function find($id)
@@ -57,9 +54,6 @@ class User{
         $db->conn->close();
         return $user;
     }
-
-
-
 
     public static function all()
     {
@@ -101,6 +95,5 @@ class User{
         $stmt->close();
         $db->conn->close();
         include "./models/footer.php"; /*----- FOOTER HTML -----*/
-
     }
 }

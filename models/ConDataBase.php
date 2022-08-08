@@ -1,6 +1,6 @@
 <?php
-    class ConDataBase{
-        
+    class ConDataBase{      
+         
         public $conn;
         
         public function __construct() {

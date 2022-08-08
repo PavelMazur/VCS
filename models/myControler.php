@@ -28,8 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (strlen($_POST['name']) < 3 && strlen($_POST['name']) != 0) {
             $_SESSION['errName'][] = strtoupper($_POST['name']) . ' name is too short';
             $err++;
-
-        } else if (strlen($_POST['name']) > 15) {
+        } 
+        
+        else if (strlen($_POST['name']) > 15) {
             $_SESSION['errName'][] = strtoupper($_POST['name']) . ' name is too long';
             $err++;
         }
@@ -56,7 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (strlen($_POST['surname']) < 3 && strlen($_POST['surname']) != 0) {
             $_SESSION['errSurname'][] = strtoupper($_POST['surname']) . ' lotName is too short';
             $err++;
-        } else if (strlen($_POST['surname']) > 15) {
+        } 
+
+        else if (strlen($_POST['surname']) > 15) {
             $_SESSION['errSurname'][] = strtoupper($_POST['surname']) . ' lotName is too long';
             $err++;
         }
@@ -76,6 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['errAge'][] = "You didn't enter the age<br>";
             $err++;
         } 
+
         else if (!preg_match("/^(\d+(?:[\,{2, }\.{2, }]\d{1,})?)$/", $_POST['age']) && ($_POST['age'][0] != 0 && $_POST['age'][0] != ',' && $_POST['age'][0] != '.')) {
             $_SESSION['errAge'][] = "You can't put 2 (dots/commas) in a row or in age<br>";
             $err++;
@@ -91,13 +95,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $err++;
         }
         
-
         if ($_POST['age'][0] == ',') {
             $_SESSION['errAge'][] = "You can't put first COMMA<br>";
             $err++;
         }
-
-        
+       
         if ($_POST['age'][0] == '.') {
             $_SESSION['errAge'][] = "You can't put first DOT<br>";
             $err++;
@@ -166,7 +168,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $err++;
         } 
     
-
         /* --------------------------------------------------
 	                     function tail 
         ----------------------------------------------------- */
@@ -177,7 +178,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     header("Location:" . $_SERVER['REQUEST_URI']);
     die;
-
     }
 
     if (isset($_POST['edit'])) {
